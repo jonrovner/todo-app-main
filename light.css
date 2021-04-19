@@ -179,7 +179,17 @@ span{
     padding: 0.2rem;
 }
 #clear{
+    margin-right: 1rem;
     color:var(--light-grayish-blue)
+}
+#clear:hover{
+    color:var(--very-dark-grayish-blue-bright)
+}
+.drag{
+    color: var(--light-grayish-blue);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 .selected{
     text-decoration: line-through;
