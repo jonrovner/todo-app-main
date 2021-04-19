@@ -193,3 +193,8 @@ span{
     text-decoration: line-through;
     color: var(--very-dark-grayish-blue);
 }
+
+.attribution{
+    color: var(--light-grayish-blue);
+    text-align: center;
+}

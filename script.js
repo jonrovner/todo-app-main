@@ -119,7 +119,7 @@ function toggleDone(e){
 function toggleTheme(){
     const styleLink = document.querySelector("#styleLink")
     if (styleLink.getAttribute("href") == "light.css") {
-         styleLink.href = "styles.css";
+         styleLink.href = "dark.css";
        } else {        
         styleLink.href = "light.css";
       }
