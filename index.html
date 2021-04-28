@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
- 
-  
   <title>Frontend Mentor | Todo app</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/dark.css" id="styleLink">
-
 </head>
+
 <body>
 <div class="headingImage"></div>
 <section class="todo">
@@ -23,18 +22,18 @@
 
   </div>
   <form class="addTodo">
-  <input name="todo" type="text" placeholder="Create a new Todo">
+    <input name="todo" type="text" placeholder="Create a new Todo">
   </form>
+
   <ul class="todoList"></ul>
+  
   <div class="controls">
     <p><span></span>items left</p>
-    
-  <ul>
+    <ul>
     <li class="controlsItem" id="all">All</li>
     <li class="controlsItem" id="active">Active</li>
     <li class="controlsItem" id="completed">Completed</li>
-  </ul>
-  
+    </ul>
     <div id="clear" onclick="clearCompleted()">Clear Completed</div>
   </div>
   <div class="drag">Drag and drop to reorder list</div>
@@ -42,7 +41,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     <br><br>
     Coded by <a href="https://github.com/jonrovner">JonRov</a>.
-</div>
+  </div>
 </section>
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js" integrity="sha512-5x7t0fTAVo9dpfbp3WtE2N6bfipUwk7siViWncdDoSz2KwOqVC1N9fDxEOzk0vTThOua/mglfF8NO7uVDLRC8Q==" crossorigin="anonymous"></script>

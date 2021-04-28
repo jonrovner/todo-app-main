@@ -46,9 +46,7 @@ function addTodo(event){
     this.reset();
     todos.push(item);
     localStorage.setItem("todos", JSON.stringify(todos))
-
     populateList(todos, todoList, filtering)
-    
 }
 
 function populateList(todos, element, filter){
@@ -80,24 +78,20 @@ function populateList(todos, element, filter){
             </div>
             </li>
             `
-        }).join('');
-        
-        
+        }).join('');      
 }
 
 function handleControls(e){
     filtering = e.target.id;
     e.target.style.color = "hsl(220, 98%, 61%)";
-    
     controlItems.forEach(el => {
         if(el.id!==e.target.id){
             el.style.color="hsl(234, 11%, 52%)"}
         } 
         )
     todos = JSON.parse(localStorage.getItem('todos'))     
-   populateList(todos, todoList, filtering)
-   
-  }
+    populateList(todos, todoList, filtering)
+}
 
 function toggleDone(e){
     if (!e.target.matches('input')) return;
@@ -113,7 +107,6 @@ function toggleDone(e){
         } else{
         items[index].children[0].classList.remove("selected")
     }}) 
-    
     
 }
 function toggleTheme(){
