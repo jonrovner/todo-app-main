@@ -18,6 +18,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - Flexbox
 - Vanilla Javascript
 - sortable js (library)
+- Node.js Express static server
 
 
 ### What I learned
@@ -27,6 +28,7 @@ localStorage as a client based JSON database.
 Event delegation, 
 dark and bright theme switching 
 drag and drop list implementation with sortable js
+Basic Node js and Express server functionality
 
 
 ### Continued development
