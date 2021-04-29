@@ -19,50 +19,48 @@ html {
 
 body{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
-    background-color: var(--dark-blue);
-    
+    background-color: var(--dark-blue);    
 }
 
-.heading{
+.container{
+    background-image: url('./images/bg-desktop-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 60rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.heading{    
     display: flex;
     justify-content: space-between;
-    align-content: center;
     align-items: center;
-    width: 34rem;
-    
+    width: 20rem;    
 }
-.headingImage{
-    background-image: url('./images/bg-desktop-dark.jpg');
-    width: 100vw;
-    height:250px;
-}
+
 h1{
-    letter-spacing: 1rem;
+    letter-spacing: 0.75rem;
     color: hsl(236, 33%, 92%);
-    font-size: 32px;
+    font-size: 1.65rem;
 }
-.mode{
+.mode{    
     background-image: url('./images/icon-sun.svg');
-    width: 32px;
-    height: 32px;
+    width: 1.5rem;
+    height: 1.5rem;
     background-repeat: no-repeat;
 }
 .todo{
-    position: absolute;
-    top: 2.75rem;
-    width: 34rem;
-    
-}
-
-input ::before {
-    content: "O"
+    width: 85%;
+    margin: 2rem auto;   
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 input {
@@ -70,17 +68,18 @@ input {
 }
 
 .addTodo input {
+    padding-left: 2rem;
     background-color: var(--darkish-blue);
     color: var(--light-grayish-blue);
     font-family: Josefin Sans;
     border: none;
-    padding-left: 2rem;
     font-size: 18px;
-    width: 34rem;
-    height: 3.25rem;
+    width: 20rem;
+    height: 3.1rem;
     border-radius: 0.5rem;
     border: none
 }
+
 .addTodo ::placeholder{
     color: var(--dark-grayish-blue);
     font-size: 14px;
@@ -90,18 +89,19 @@ input {
     padding-left: 0;
     box-shadow: 3px 3px 29px 0px hsla(236, 89%, 4%, 0.3);
     margin-bottom: 0;
-    border-radius: 5px 5px 0px 0px;
-    
 }
 
 .todoList li{
     background-color: var(--darkish-blue);
     color: var(--light-grayish-blue);
-    width: 34rem;
-    height: 3.25rem;
+    width: 20rem;
+    border-radius: 5px 5px 0px 0px;
+    height: 3.1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.todoListItem{
     border-bottom: 1px solid var(--very-dark-grayish-blue);
 }
 .todoListItem:first-child {
@@ -113,6 +113,7 @@ input {
 }
 .todoList li label{
     justify-self: start;
+    font-size: 0.75rem;
 }
 
 
@@ -120,11 +121,11 @@ li input{
     appearance: none;
     margin-left: 1rem;
     margin-right: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
     background-color: var(--darkish-blue);
     box-shadow: 0px 0px 0px 1px var(--dark-grayish-blue);
-	padding: 0.5rem;
+	padding: 0.25rem;
 	border-radius: 0.75rem;
 	display: inline-block;
 	position: relative;
@@ -132,7 +133,7 @@ li input{
 
 li input:checked{
     background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    }
+}
 li input:checked::after{
     content: url('images/icon-check.svg');
 }
@@ -140,8 +141,9 @@ li input:checked::after{
 .cross {
     margin-right: 1rem ;
     opacity: 0;
+    border-bottom: 1px solid var(--very-dark-grayish-blue);
 }
-.cross:hover {
+li input:hover .cross {
     opacity: 1;
     }
 
@@ -151,6 +153,7 @@ li input:checked::after{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.75rem;
 }
 p{
     color: var(--dark-grayish-blue);
@@ -160,19 +163,27 @@ span{
     color: var(--light-grayish-blue)
 }
 
-.controls ul{
+.view{
+    display: flex;
+    margin-top: 1rem;
+    height: 3.1rem;
+    justify-content: center;
+}
+
+.view ul{
+    padding-left: 0;
     background-color: var(--very-dark-blue);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     list-style-type: none;
 }
 
-.controls ul li {
+.view ul li {
     appearance: none;
-    color: var(--light-grayish-blue);
+    color: var(--dark-grayish-blue);
     text-decoration: none;
-    padding: 0.2rem;
+    padding: 0.45rem;
+    font-size: 0.85rem;
 }
 #clear{
     margin-right: 1rem;

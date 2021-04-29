@@ -18,7 +18,9 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - Flexbox
 - Vanilla Javascript
 - sortable js (library)
-- Node.js Express static server
+- Node.js 
+- Express 
+- static 
 
 
 ### What I learned

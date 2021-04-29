@@ -195,3 +195,7 @@ span{
     text-decoration: line-through;
     color: var(--dark-grayish-blue-bright);
 }
+.attribution{
+    color: var(--light-grayish-blue);
+    text-align: center;
+}
