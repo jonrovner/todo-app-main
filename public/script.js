@@ -110,12 +110,16 @@ function toggleDone(e){
     
 }
 function toggleTheme(){
-    const styleLink = document.querySelector("#styleLink")
-    if (styleLink.getAttribute("href") == "light.css") {
-         styleLink.href = "dark.css";
-       } else {        
-        styleLink.href = "light.css";
-      }
+    const body = document.querySelector('body')
+    if (body.classList.contains("dark")){
+        body.classList.remove("dark");
+        body.classList.add("bright")
+    }else{
+        body.classList.remove("bright");
+        body.classList.add("dark")
+    }
+
+   
 }
 
 addForm.addEventListener('submit', addTodo)
