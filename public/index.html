@@ -8,45 +8,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/dark.css" id="styleLink">
+  <link rel="stylesheet" href="./scss/style.css" id="styleLink">
 </head>
 
 <body>
 <div class="container">
-<section class="todo">
+  <section class="todo">
   
-  <div class="heading">
+    <div class="heading">
     <h1>TODO</h1>
     <div class="mode" onclick="toggleTheme()">
     </div>
 
-  </div>
+    </div>
 
-  <form class="addTodo">
-    <input name="todo" type="text" placeholder="Create a new Todo">
-  </form>
+    <form class="addTodo">
+      <input name="todo" type="text" placeholder="Create a new Todo">
+    </form>
 
-  <ul class="todoList"></ul>
+    <ul class="todoList"></ul>
   
-  <div class="controls">
+    <div class="controls">
     <p><span></span>items left</p>
-    
+    <div class="controls view hide-for-mobile">
+      <ul>
+        <li class="controlsItem" id="all">All</li>
+        <li class="controlsItem" id="active">Active</li>
+        <li class="controlsItem" id="completed">Completed</li>
+        </ul>
+      </div>
     <div id="clear" onclick="clearCompleted()">Clear Completed</div>
-  </div>
-  <div class="controls view">
+    </div>
+    <div class="controls view hide-for-desktop">
     <ul>
       <li class="controlsItem" id="all">All</li>
       <li class="controlsItem" id="active">Active</li>
       <li class="controlsItem" id="completed">Completed</li>
       </ul>
-  </div>
-  <div class="drag">Drag and drop to reorder list</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    <br><br>
-    Coded by <a href="https://github.com/jonrovner">JonRov</a>.
-  </div>
-</section>
+    </div>
+    <div class="drag">Drag and drop to reorder list</div>
+      <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      <br><br>
+      Coded by <a href="https://github.com/jonrovner">JonRov</a>.
+    </div>
+  </section>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js" integrity="sha512-5x7t0fTAVo9dpfbp3WtE2N6bfipUwk7siViWncdDoSz2KwOqVC1N9fDxEOzk0vTThOua/mglfF8NO7uVDLRC8Q==" crossorigin="anonymous"></script>
 <script src="script.js"></script>
