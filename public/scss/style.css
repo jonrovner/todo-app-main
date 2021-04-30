@@ -60,6 +60,12 @@ body {
   width: 20rem;
 }
 
+@media (min-width: 40em) {
+  .heading {
+    width: 34rem;
+  }
+}
+
 h1 {
   letter-spacing: 0.75rem;
   color: #e4e5f1;
@@ -92,6 +98,12 @@ input {
   height: 3.1rem;
   border-radius: 0.5rem;
   border: none;
+}
+
+@media (min-width: 40em) {
+  .addTodo input {
+    width: 34rem;
+  }
 }
 
 .addTodo ::-webkit-input-placeholder {
@@ -136,6 +148,12 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 40em) {
+  .todoList li {
+    width: 34rem;
+  }
 }
 
 .todoListItem {
@@ -222,18 +240,17 @@ span {
   color: var(--light-grayish-blue);
 }
 
-.view {
+.viewcontrol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1rem;
   height: 3.1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.view ul {
+.viewcontrol ul {
   padding-left: 0;
   background-color: var(--very-dark-blue);
   display: -webkit-box;
@@ -243,16 +260,6 @@ span {
       -ms-flex-pack: center;
           justify-content: center;
   list-style-type: none;
-}
-
-.view ul li {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  color: var(--dark-grayish-blue);
-  text-decoration: none;
-  padding: 0.45rem;
-  font-size: 0.85rem;
 }
 
 #clear {
@@ -266,6 +273,7 @@ span {
 
 .drag {
   color: var(--dark-grayish-blue);
+  font-size: 0.85rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -277,19 +285,77 @@ span {
 }
 
 .attribution {
-  color: var(--light-grayish-blue);
+  font-size: 0.75rem;
+  color: var(--dark-grayish-blue);
   text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+.hide-for-mobile {
+  padding-left: 0;
+  background-color: var(--very-dark-blue);
+  color: var(--dark-grayish-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  background-color: var(--darkish-blue);
+}
+
+.hide-for-mobile li {
+  padding: 0.45rem;
 }
 
 @media (max-width: 40em) {
   .hide-for-mobile {
+    margin-top: 0 !important;
     display: none;
   }
+}
+
+.hide-for-desktop {
+  padding-left: 0;
+  background-color: var(--darkish-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  list-style-type: none;
+  padding: 0.4rem;
+}
+
+.hide-for-desktop li {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+  padding: 0.45rem;
+  font-size: 0.85rem;
 }
 
 @media (min-width: 40em) {
   .hide-for-desktop {
     display: none;
+    margin-top: 1rem !important;
   }
+}
+
+.controls view .hide-for-mobile {
+  margin-bottom: 0 !important;
+}
+
+.controls view .hide-for-desktop {
+  margin-top: 1rem !important;
 }
 /*# sourceMappingURL=style.css.map */

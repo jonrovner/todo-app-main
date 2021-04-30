@@ -41,6 +41,10 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 20rem;    
+
+    @include breakpoint-up(medium){
+        width: 34rem;
+    }
 }
 
 h1{
@@ -74,7 +78,11 @@ input {
     width: 20rem;
     height: 3.1rem;
     border-radius: 0.5rem;
-    border: none
+    border: none;
+
+    @include breakpoint-up(medium){
+        width: 34rem;
+    }
 }
 
 .addTodo ::placeholder{
@@ -97,6 +105,10 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint-up(medium){
+        width: 34rem;
+    }
 }
 .todoListItem{
     border-bottom: 1px solid var(--very-dark-grayish-blue);
@@ -152,6 +164,7 @@ li input:hover .cross {
     align-items: center;
     justify-content: space-between;
     font-size: 0.75rem;
+    
 }
 p{
     color: var(--dark-grayish-blue);
@@ -160,29 +173,22 @@ span{
     margin-left: 1rem;
     color: var(--light-grayish-blue)
 }
-
-.view{
+.viewcontrol{
     display: flex;
-    margin-top: 1rem;
     height: 3.1rem;
     justify-content: center;
+    ul{
+        padding-left: 0;
+        background-color: var(--very-dark-blue);
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
 }
 
-.view ul{
-    padding-left: 0;
-    background-color: var(--very-dark-blue);
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
 
-.view ul li {
-    appearance: none;
-    color: var(--dark-grayish-blue);
-    text-decoration: none;
-    padding: 0.45rem;
-    font-size: 0.85rem;
-}
+
+
 #clear{
     margin-right: 1rem;
     color:var(--dark-grayish-blue)
@@ -193,6 +199,7 @@ span{
 
 .drag{
     color: var(--dark-grayish-blue);
+    font-size: 0.85rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -204,19 +211,63 @@ span{
 }
 
 .attribution{
-    color: var(--light-grayish-blue);
+    font-size: 0.75rem;
+    color: var(--dark-grayish-blue);
     text-align: center;
+    a{
+        text-decoration: none;
+    }
 }
 
 .hide-for-mobile {
+    padding-left: 0;
+    background-color: var(--very-dark-blue);
+    color: var(--dark-grayish-blue);
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: var(--darkish-blue);
+    
+    li{
+        padding: 0.45rem;
+    }
+    
     @include breakpoint-down(medium){
+        margin-top: 0 !important;
         display: none;
+       
     }
 
 }
 
 .hide-for-desktop{
+    
+    padding-left: 0;
+    background-color: var(--darkish-blue);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    list-style-type: none;
+    padding: 0.4rem;
+    
+    li {
+        appearance: none;
+        color: var(--dark-grayish-blue);
+        text-decoration: none;
+        padding: 0.45rem;
+        font-size: 0.85rem;
+    }
+
     @include breakpoint-up(medium){
         display: none;
+        margin-top: 1rem !important;
     }
+}
+
+.controls view .hide-for-mobile{
+    margin-bottom: 0 !important;
+}
+
+.controls view .hide-for-desktop{
+    margin-top: 1rem !important;
 }
