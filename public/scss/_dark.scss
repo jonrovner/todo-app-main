@@ -24,7 +24,7 @@
         justify-content: center;
         
         @include breakpoint-up(medium){
-            background-size: 1200px 240px;
+            background-size: 1400px 300px;
         }
 
     .heading{    
@@ -32,6 +32,7 @@
         justify-content: space-between;
         align-items: center;
         width: 20rem;    
+        margin-bottom: 0.5rem;
 
         @include breakpoint-up(medium){
             width: 34rem;
@@ -42,10 +43,10 @@
         letter-spacing: 0.75rem;
         color: $veryLightGray;
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight: 500;
 
         @include breakpoint-up(medium){
-            font-size: 2rem;
+            font-size: 2.45rem;
         }
     }
     .mode{    
@@ -57,7 +58,10 @@
     }
     .todo{
     
-        margin: 1.8rem auto;       
+        margin: 2rem auto;   
+        @include breakpoint-up(medium){
+            margin: 3rem auto;
+        }      
 
     }
 

@@ -56,7 +56,7 @@ html {
 
 @media (min-width: 40em) {
   .dark .container {
-    background-size: 1200px 240px;
+    background-size: 1400px 300px;
   }
 }
 
@@ -71,6 +71,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   width: 20rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 40em) {
@@ -83,12 +84,12 @@ html {
   letter-spacing: 0.75rem;
   color: #fafafa;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @media (min-width: 40em) {
   .dark .container h1 {
-    font-size: 2rem;
+    font-size: 2.45rem;
   }
 }
 
@@ -101,7 +102,13 @@ html {
 }
 
 .dark .container .todo {
-  margin: 1.8rem auto;
+  margin: 2rem auto;
+}
+
+@media (min-width: 40em) {
+  .dark .container .todo {
+    margin: 3rem auto;
+  }
 }
 
 .dark .container input {
