@@ -1,0 +1,333 @@
+.bright{ 
+
+    background-color: #fafafa;
+    margin:0;
+
+    body{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;    
+    }
+
+    .container{
+        max-width: 1400px;
+        margin: auto;
+        background-image: url('../images/bg-desktop-light.jpg');
+        background-size: 600px 200px;
+        background-repeat: no-repeat;
+        background-position: top center;        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint-up(medium){
+            background-size: 1400px 300px;
+        }
+    
+
+    .heading{    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20rem;    
+        margin-bottom: 0.5rem;
+
+        @include breakpoint-up(medium){
+            width: 34rem;
+        }
+    }
+
+    h1{
+        letter-spacing: 0.75rem;
+        color: $veryLightGray;
+        font-size: 1.5rem;
+        font-weight: 500;
+        @include breakpoint-up(medium){
+            font-size: 2.45rem;
+            
+        }
+    }
+    .mode{    
+        background-image: url('../images/icon-moon.svg');
+        width: 1.25rem;
+        height: 1.25rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .todo{
+    
+        margin: 2rem auto;     
+        @include breakpoint-up(medium){
+            margin: 3rem auto;
+        }  
+
+    }
+
+    input {
+        outline: none;
+    }
+
+    .addTodo {
+        margin-top: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        
+        .bullet{
+            position: absolute;
+            margin-left: 1rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 0.6rem;
+            background-color: $veryLightGray;
+            box-shadow: 0px 0px 0px 1px var(--light-grayish-blue);
+        }
+        
+        input {
+        padding-left: 3rem;
+        background-color: $veryLightGray;
+        color: $darkGrayishBlueDark2;
+        font-family: Josefin Sans;
+        border: none;
+        font-size: 18px;
+        width: 20rem;
+        height: 3.1rem;
+        border-radius: 0.3rem;
+        border: none;
+
+            @include breakpoint-up(medium){
+                width: 34rem;
+                height: 4rem;
+            }
+        }
+
+       
+    }
+
+    .addTodo ::placeholder{
+        color: $darkGrayishBlue;
+        font-size: 12px;
+
+        @include breakpoint-up(medium){
+            font-size: 14px;
+        }
+    }
+
+    .todoList{
+        padding-left: 0;
+        box-shadow: 3px 3px 44px 0px rgba(1, 2, 19, 0.15);
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+
+        :hover{
+            cursor: pointer;
+            
+        }
+    }
+
+    .todoList li{
+        background-color: $veryLightGray;
+        color: $veryDarkGrayishBlue;
+        width: 20rem;
+        border-radius: 3px 3px 0px 0px;
+        height: 3.3125rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-up(medium){
+            width: 34rem;
+            height: 4rem;
+        }
+    }
+    .todoListItem{
+        border-bottom: 1px solid $lightGrayishBlue;
+    }
+    .todoListItem:first-child {
+        border-radius: 5px 5px 0 0 !important;
+    }
+    .itemLabel{
+        display: flex;
+        align-items: center;
+    }
+    .todoList li label{
+        justify-self: start;
+        font-size: 0.75rem;
+
+        @include breakpoint-up(medium){
+            font-size: 14px;
+        }
+    }
+
+    .todoListItem:hover{
+        .itemLabel input{
+            box-shadow: 0px 0px 0px 1px hsl(192, 100%, 67%);
+        }
+        .cross{
+            opacity: 1;
+        }
+    }
+
+    li input{
+        appearance: none;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        background-color: $veryLightGray;
+        box-shadow: 0px 0px 0px 1px var(--light-grayish-blue);
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+        display: inline-block;
+        position: relative;
+
+        :hover{
+            
+            .cross{
+                opacity: 1;
+
+            }
+        }
+    }
+
+    li input:checked{
+        background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+    li input:checked::after{
+        content: url('../images/icon-check.svg');
+    }
+
+    .cross {
+        
+        margin-right: 1rem ;
+        opacity: 1;
+
+        img{
+            width: 10px;
+            height: 10px;
+        }
+
+        @include breakpoint-up(medium){
+            opacity: 0;
+        }
+        
+    }
+    
+    li input:hover {
+        .cross {
+        opacity: 1;
+        }    
+    }
+
+    .controls {
+        
+        background-color: $veryLightGray;
+        box-shadow: 1px 20px 51px -2px rgba(1, 2, 19, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        height: 3.3125rem;
+        
+    }
+    p{
+        color: var(--dark-grayish-blue);
+    }
+    span{
+        margin-left: 1rem;
+        color: var(--light-grayish-blue)
+    }
+   
+    #clear{
+        margin-right: 1rem;
+        color:$darkGrayishBlue;
+    }
+    #clear:hover{
+        color:$darkGrayishBlue;
+    }
+
+    .drag{
+        color: var(--dark-grayish-blue);
+        font-size: 0.85rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .selected{
+        text-decoration: line-through;
+        color: $darkGrayishBlue;
+    }
+
+    .attribution{
+        font-size: 0.75rem;
+        color: var(--dark-grayish-blue);
+        text-align: center;
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .hide-for-mobile {
+        padding-left: 0;
+        background-color: $veryLightGray;
+        color: var(--dark-grayish-blue);
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        
+        :hover{
+            color:$darkGrayishBlueDark2
+        }
+        
+        li{
+            padding: 0.45rem;
+           
+            :hover{
+                color:$darkGrayishBlueDark2
+            }
+        }
+        
+        @include breakpoint-down(medium){
+            margin-top: 0 !important;
+            display: none;
+        
+        }
+
+    }
+
+    .hide-for-desktop{
+        background-color: $veryLightGray;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        list-style-type: none;
+        padding: 0.4rem;
+        box-shadow: 1px 20px 51px -2px rgba(1, 2, 19, 0.2);
+        height: 3.3125rem;
+       
+        
+        li {
+            appearance: none;
+            color: var(--dark-grayish-blue);
+            text-decoration: none;
+            padding: 0.45rem;
+            font-size: 0.85rem;
+        }
+
+        @include breakpoint-up(medium){
+            display: none;
+            margin-top: 1rem !important;
+        }
+    }
+
+}
+
+   
+
+
+}
